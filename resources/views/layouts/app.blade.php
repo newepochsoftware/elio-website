@@ -87,28 +87,28 @@
               <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav navbar-right">
                       <li>
-                          <a href="/">Home</a>
+                          <a href="{{ route('home') }}">Home</a>
                       </li>
                       <li class="dropdown">
                         <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="/cocktails">Cocktails</a></li>
-                            <li><a href="/desserts">Desserts</a></li>
-                            <li><a href="/dinner">Dinner</a></li>
-                            <li><a href="/lounge">Lounge</a></li>
+                            <li><a href="{{ route('cocktails.index') }}">Cocktails</a></li>
+                            <li><a href="{{ route('desserts.index') }}">Desserts</a></li>
+                            <li><a href="{{ route('dinner.index') }}">Dinner</a></li>
+                            <li><a href="{{ route('lounge.index') }}">Lounge</a></li>
                         </ul>
                       </li>
                       <li>
-                        <a href="/gallery">Gallery</a>
+                        <a href="{{ route('gallery') }}">Gallery</a>
                       </li>
                       <li>
-                        <a href="/reservations">Reservations</a>
+                        <a href="{{ route('reservations') }}">Reservations</a>
                       </li>
                       <li>
                         <a href="/private-events">Private Events</a>
                       </li>
                       <li>
-                        <a href="/about-us">About Us</a>
+                        <a href="{{ route('about') }}">About Us</a>
                       </li>
                       <li>
                         <a href="/careers">Careers</a>
