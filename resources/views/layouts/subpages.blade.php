@@ -138,9 +138,9 @@
       <section class="footer" id="footer">
         <div class="footer-content" data-xid="footer-content">
           <div class="social-icons">
-            <li><a href="https://www.facebook.com/elio.lasvegas/" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
-            <li><a href="https://instagram.com/elio_lv" target="_blank"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://twitter.com/elio_lv" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/elio.lasvegas/" target="_blank"><i class="fa fa-facebook-square"></i></a></li>
+            <li><a href="https://instagram.com/elio_lv" target="_blank"><i class="fa fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/elio_lv" target="_blank"><i class="fa fa-twitter"></i></a></li>
           </div>
           <div class="footer-logo"><img src="https://storage.googleapis.com/wynn-bucket/elio-footer-logo.png" alt="Elio"></div>
           <a href="https://www.wynnlasvegas.com" target="_blank" class="Footer-nav-item">© 2020 Wynn Resorts Holdings, LLC. All rights reserved.</a><br/><br/>
