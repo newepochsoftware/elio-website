@@ -1596,11 +1596,22 @@ fieldset[disabled] .btn-default.active {
    ----------- */
 
 .page_header {
-    background: url(../img/header/1.jpg) no-repeat center top;
+    background: url('https://storage.googleapis.com/wynn-bucket/elio-gallery-header.jpg') no-repeat center top;
     background-size: cover;
     padding: 200px 0 150px;
 }
-
+.page_header_about {
+    background: url('https://storage.googleapis.com/wynn-bucket/elio-man-bg.jpg') no-repeat center center;
+    background-size: cover;
+}
+.page_header_reservations {
+    background: url('https://storage.googleapis.com/wynn-bucket/elio-slide-2.jpg') no-repeat center bottom;
+    background-size: cover;
+}
+.page_header_cocktails {
+    background: url('https://storage.googleapis.com/wynn-bucket/elio-slide-3.jpg') no-repeat center center;
+    background-size: cover;
+}
 .page_header h2 {
     margin: 0;
     font-size: 70px;

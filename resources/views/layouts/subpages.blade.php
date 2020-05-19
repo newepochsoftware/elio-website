@@ -178,31 +178,6 @@
     <script src="{{ asset('js/main.js') }}"></script>
     <script src="{{ asset('js/vendor/mc/jquery.ketchup.all.min.js') }}"></script>
     <script src="{{ asset('js/vendor/mc/main.js') }}"></script>
-    <script>
-    var mymap = L.map('mapid', { zoomControl: false }).setView([36.1270443, -115.1673266], 13);
-
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: '<a href="https://eliolv.com/">Elio</a>',
-        maxZoom: 18,
-        id: 'mapbox/streets-v11',
-        tileSize: 512,
-        zoomOffset: -1,
-        accessToken: 'pk.eyJ1Ijoic3VhcmF5IiwiYSI6ImRmOWExOGNjZmY1YmNiNWZhYjhiZjQwMjk3NTdhNzc3In0.i41eqQ5eqC3tzG5eWZ4UqQ'
-    }).addTo(mymap);
-
-    L.marker([36.1270443, -115.1673266]).addTo(mymap).bindPopup("Elio at Wynn Las Vegas").openPopup();
-
-    //Vegas Slider
-    $("#intro3 .home").vegas({
-        slides: [{
-            src: "https://storage.googleapis.com/wynn-bucket/elio-man-bg.jpg"
-        }, {
-            src: "https://storage.googleapis.com/wynn-bucket/elio-slide-2.jpg"
-        }, {
-            src: "https://storage.googleapis.com/wynn-bucket/elio-slide-3.jpg"
-        }]
-    });
-    </script>
 
 </body>
 </html>

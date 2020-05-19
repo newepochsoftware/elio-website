@@ -18,6 +18,13 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/about-us', 'AboutController@index')->name('about');
+Route::get('/gallery', 'GalleryController@index')->name('gallery');
+Route::get('/reservations', 'ReservationController@index')->name('reservations');
+Route::resource('cocktails', 'CocktailsController');
+Route::resource('desserts', 'DessertsController');
+Route::resource('dinner', 'DinnerController');
+Route::resource('lounge', 'LoungeController');
 
 
 Auth::routes();
