@@ -106,4 +106,6 @@
     <!-- Google Map -->
     <!-- Set latitude and Longitude (Get it from http://google.com/maps) -->
     <div id="mapid" style="width:100%; height:500px;"></div>
+
+
 @endsection
