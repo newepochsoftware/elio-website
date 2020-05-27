@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Page Header -->
-<section class="page_header_special">
+<section class="page_header page_header_special">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
