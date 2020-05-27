@@ -1612,6 +1612,10 @@ fieldset[disabled] .btn-default.active {
     background: url('https://storage.googleapis.com/wynn-bucket/elio-slide-3.jpg') no-repeat center center;
     background-size: cover;
 }
+.page_header_special {
+    background: url('https://storage.googleapis.com/wynn-bucket/elio-special-event-banner.jpg') no-repeat center center;
+    background-size: cover;
+}
 .page_header h2 {
     margin: 0;
     font-size: 70px;
