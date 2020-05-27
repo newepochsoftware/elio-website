@@ -25,6 +25,7 @@ Route::resource('cocktails', 'CocktailsController');
 Route::resource('desserts', 'DessertsController');
 Route::resource('dinner', 'DinnerController');
 Route::resource('lounge', 'LoungeController');
+Route::resource('private-events', 'PrivateEventsController');
 
 
 Auth::routes();
