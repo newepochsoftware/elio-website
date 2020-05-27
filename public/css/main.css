@@ -1615,6 +1615,7 @@ fieldset[disabled] .btn-default.active {
 .page_header_special {
     background: url('https://storage.googleapis.com/wynn-bucket/elio-special-event-banner.jpg') no-repeat center center;
     background-size: cover;
+    padding: 200px 0 150px;
 }
 .page_header h2 {
     margin: 0;
