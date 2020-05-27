@@ -36,7 +36,7 @@
               <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{ route('private-events.index') }}">Private Events</a></li>
-                <li><a href="/special-events">Special Events</a></li>
+                <li><a href="{{ route('special-events.index') }}">Special Events</a></li>
               </ul>
             </li>
             <li class="dropdown">
