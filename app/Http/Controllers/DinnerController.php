@@ -11,7 +11,7 @@ class DinnerController extends Controller
   {
     $Dinner = Dinner::all()->sortBy('name');
     // return Dinner::all()->sortBy('name');
-    return view('Dinner', compact('Dinner'));
+    return view('dinner', compact('dinner'));
 
   }
 

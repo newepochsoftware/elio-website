@@ -11,7 +11,7 @@ class LoungeController extends Controller
   {
     $Lounge = Lounge::all()->sortBy('name');
     // return Lounge::all()->sortBy('name');
-    return view('Lounge', compact('Lounge'));
+    return view('lounge', compact('lounge'));
 
   }
 
