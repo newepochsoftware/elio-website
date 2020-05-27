@@ -22,6 +22,7 @@ Route::get('/about-us', 'AboutController@index')->name('about');
 Route::get('/gallery', 'GalleryController@index')->name('gallery');
 Route::get('/reservations', 'ReservationController@index')->name('reservations');
 Route::get('/private-events', 'PrivateEventsController@index')->name('private-events.index');
+Route::get('/special-events', 'SpecialEventsController@index')->name('special-events.index');
 
 Route::resource('cocktails', 'CocktailsController');
 Route::resource('desserts', 'DessertsController');
