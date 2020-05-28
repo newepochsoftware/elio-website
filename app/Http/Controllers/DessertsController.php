@@ -9,7 +9,7 @@ class DessertsController extends Controller
 {
   public function index()
   {
-    $Desserts = Dessert::all()->sortBy('name');
+    $desserts = Dessert::all()->sortBy('name');
     // return Desserts::all()->sortBy('name');
     return view('desserts', compact('Desserts'));
 
