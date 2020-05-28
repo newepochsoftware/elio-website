@@ -33,7 +33,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="page-header wow fadeInDown">
-                        <h1>the restaurant<small>A little about us and a breif history of how we started.</small></h1>
+                        <h1>the restaurant</h1>
                     </div>
                 </div>
             </div>
@@ -59,11 +59,8 @@
                 </div>
                 <div class="col-md-8">
                     <p>
-                        Cras ut viverra eros. Phasellus sollicitudin sapien id luctus tempor. Sed hendrerit interdum sagittis. Donec nunc lacus, dapibus nec interdum eget, ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare mi. Etiam interdum ligula purus, placerat aliquam odio faucibus a. Pellentesque et pulvinar lectus. Fusce scelerisque nisi id nisl gravida ultricies.
-                    </p>
-                    <br>
-                    <p>
-                        Ultrices eget justo. Nam purus lacus, efficitur eget laoreet sed, finibus nec neque. Cras eget enim in diam dapibus sagittis. In massa est, dignissim in libero ac, fringilla ornare mi.
+                      Guests of Elio will be immersed in a sleek and seductive environment. Day turns to night as guests move from the energy of the bar and lounge to the warmth of the dining room. The modern and minimal architectural lines are paired with rich textures and beautiful art that creates a backdrop for lively gatherings and exceptional food.
+                      <br/><br/>Elio will showcase a thoughtful menu of recipes grounded in Mexico’s rich culinary traditions, infusing the finest regional and seasonal ingredients. The bar and lounge will add to the celebration by showcasing Mexico’s best hand-selected agave-based spirits.
                     </p>
                     <!-- <img src="img/signature.png" alt="signature"> -->
                 </div>

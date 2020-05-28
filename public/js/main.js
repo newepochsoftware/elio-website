@@ -618,10 +618,10 @@ $(function() {
             $(".navbar-fixed-top").css("background", "rgba(0, 0, 0, 0.9)");
 
         else
-            $(".navbar-fixed-top").css("background", "rgba(0, 0, 0, 0.3)");
+            $(".navbar-fixed-top").css("background", "rgba(0, 0, 0, 0.8)");
 
     });
 
-    
+
 
 }); /* End Strict Function */

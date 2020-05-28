@@ -43,7 +43,7 @@
               <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{ route('about') }}">About Us</a></li>
-                <li><a href="/careers">Careers</a></li>
+                <li><a href="https://www.wynnjobs.com/" target="_blank">Careers</a></li>
               </ul>
             </li>
           </ul>

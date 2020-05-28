@@ -26,7 +26,7 @@
         </div>
         <div class="food-menu wow fadeInUp">
             <div class="row menu-items">
-              @foreach ($Lounge as $lounges)
+              @foreach ($lounge as $lounges)
                 <div class="menu-item col-sm-6 col-xs-12 starter Lounge Lounge">
                     <div class="clearfix menu-wrapper">
                         <h4>{{ $lounges->name }}</h4>

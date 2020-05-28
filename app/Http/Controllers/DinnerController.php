@@ -9,7 +9,7 @@ class DinnerController extends Controller
 {
   public function index()
   {
-    $Dinner = Dinner::all()->sortBy('name');
+    $dinner = Dinner::all()->sortBy('name');
     // return Dinner::all()->sortBy('name');
     return view('dinner', compact('dinner'));
 

@@ -9,7 +9,7 @@ class LoungeController extends Controller
 {
   public function index()
   {
-    $Lounge = Lounge::all()->sortBy('name');
+    $lounge = Lounge::all()->sortBy('name');
     // return Lounge::all()->sortBy('name');
     return view('lounge', compact('lounge'));
 
