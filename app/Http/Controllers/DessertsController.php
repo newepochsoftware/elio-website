@@ -11,7 +11,7 @@ class DessertsController extends Controller
   {
     $desserts = Dessert::all()->sortBy('name');
     // return Desserts::all()->sortBy('name');
-    return view('desserts', compact('Desserts'));
+    return view('desserts', compact('desserts'));
 
   }
 
@@ -27,16 +27,16 @@ class DessertsController extends Controller
 
   public function update(Request $request, $id)
   {
-      $Desserts = Dessert::findOrFail($id);
-      $Desserts->update($request->all());
+      $desserts = Dessert::findOrFail($id);
+      $desserts->update($request->all());
 
-      return $Desserts;
+      return $desserts;
   }
 
   public function delete(Request $request, $id)
   {
-      $Desserts = Dessert::findOrFail($id);
-      $Desserts->delete();
+      $desserts = Dessert::findOrFail($id);
+      $desserts->delete();
 
       return 204;
   }
