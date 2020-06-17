@@ -1,14 +1,19 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+<div class="card shadow-none">
+  <div class="card-block">
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+      <div class="account-box">
+
+          <div class="card-box shadow-none p-4 mt-2">
+              <h2 class="text-uppercase text-center pb-3">
+                  <a href="/" class="text-success">
+                      <span><img src="https://storage.googleapis.com/wynn-bucket/elio-footer-logo.png" alt="" height="26"></span>
+                  </a>
+              </h2>
+
+              <form method="POST" action="{{ route('login') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -63,15 +68,22 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-block btn-primary">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
+                      </form>
+
+                      <!-- <div class="row mt-4">
+                          <div class="col-sm-12 text-center">
+                              <p class="text-muted">Don't have an account? <a href="page-register.html" class="text-dark ml-1"><b>Sign Up</b></a></p>
+                          </div>
+                      </div> -->
+
+                  </div>
+              </div>
+
+          </div>
         </div>
-    </div>
-</div>
-@endsection
+        @endsection
