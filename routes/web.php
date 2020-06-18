@@ -28,6 +28,9 @@ Route::resource('cocktails', 'CocktailsController');
 Route::resource('desserts', 'DessertsController');
 Route::resource('dinner', 'DinnerController');
 Route::resource('lounge', 'LoungeController');
+Route::resource('administrator', 'AdminController');
+
+Route::get('/admin/cocktails', 'CocktailsController@cocktails')->name('cocktails-list');
 
 
 Auth::routes();

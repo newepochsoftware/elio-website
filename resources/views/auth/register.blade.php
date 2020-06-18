@@ -13,7 +13,7 @@
                   </a>
               </h2>
 
-              <form method="POST" action="{{ route('login') }}">
+              <form method="POST" action="{{ route('register') }}">
                         @csrf
 
                         <div class="form-group row">
