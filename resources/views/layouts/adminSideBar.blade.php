@@ -49,7 +49,7 @@
                         <li><a href="{{ route('cocktails-list') }}">Cocktails</a></li>
                         <ul class="nav-third-level" aria-expanded="false">
                             <li><a href="{{ route('cocktails-list') }}">View All</a></li>
-                            <li><a href="{{ route('cocktails-list') }}">Create New</a></li>
+                            <li><a href="{{ route('cocktails.create') }}">Create New</a></li>
                         </ul>
 
                         <li><a href="{{ route('cocktails-list') }}">Desserts</a></li>

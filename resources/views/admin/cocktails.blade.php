@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
 <!-- CSS -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
 <!-- Default theme -->
@@ -13,9 +11,9 @@
 <!-- Bootstrap theme -->
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 
-
 <div class="col-lg-12">
     <h4 class="header-title">Cocktails</h4>
+
     <p class="sub-header">
       @if (session('status'))
           <div class="alert alert-success">
@@ -82,7 +80,7 @@
       // success notification
       // Shorthand for:
       // alertify.notify( message, 'success', [wait, callback]);
-      alertify.success('Menu Updated');
+      alertify.success('Cocktails Successfully Updated');
 
       var sort_id = [];
       var token = $('meta[name="csrf-token"]').attr('content');

@@ -23,10 +23,9 @@ class CocktailsController extends Controller
 
   public function index()
   {
-    $cocktails = Cocktails::all()->sortBy('name');
+    $cocktails = Cocktails::all()->sortBy('sort_id');
     // return Cocktails::all()->sortBy('name');
     return view('cocktails', compact('cocktails'));
-
   }
 
   public function show($id)
@@ -39,10 +38,21 @@ class CocktailsController extends Controller
     $cocktails = Cocktails::all()->sortBy('sort_id');
     return view('admin.cocktails', compact('cocktails'));
   }
-
+  public function create()
+  {
+    return view('admin.cocktails-create');
+  }
   public function store(Request $request)
   {
-      return Cocktails::create($request->all());
+      $cocktails = new cocktails();
+      $cocktails->sort_id = $request->get('sort_id');
+      $cocktails->cocktail_category = $request->get('cocktail_category');
+      $cocktails->name = $request->get('name');
+      $cocktails->desc = $request->get('desc');
+      $cocktails->price = $request->get('price');
+      $cocktails->save();
+
+      return redirect('/admin/cocktails')->with('success', 'Cocktails Have Been Added');
   }
 
   public function edit($id)
@@ -90,11 +100,11 @@ class CocktailsController extends Controller
 
     }
 
-  public function delete(Request $request, $id)
+  public function destroy(Request $request, $id)
   {
-      $Cocktails = Cocktails::findOrFail($id);
-      $Cocktails->delete();
+      $cocktails = Cocktails::findOrFail($id);
+      $cocktails->delete();
 
-      return 204;
+      return redirect('/admin/cocktails')->with('success', 'Cocktails Have Been Added');
   }
 }
