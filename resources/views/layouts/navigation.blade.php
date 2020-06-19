@@ -18,7 +18,7 @@
                 <a href="{{ route('home') }}">Home</a>
             </li>
             <li class="dropdown">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menus<span class="caret"></span></a>
               <ul class="dropdown-menu">
                   <li><a href="{{ route('cocktails.index') }}">Cocktails</a></li>
                   <li><a href="{{ route('desserts.index') }}">Desserts</a></li>
@@ -33,14 +33,14 @@
               <a href="{{ route('reservations') }}">Reservations</a>
             </li>
             <li class="dropdown">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{ route('private-events.index') }}">Private Events</a></li>
                 <li><a href="{{ route('special-events.index') }}">Special Events</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="{{ route('about') }}">About Us</a></li>
                 <li><a href="https://www.wynnjobs.com/" target="_blank">Careers</a></li>

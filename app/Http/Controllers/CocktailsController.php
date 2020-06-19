@@ -18,7 +18,7 @@ class CocktailsController extends Controller
   */
   public function __construct()
   {
-   $this->middleware('auth', ['except' => array('show')]);
+   $this->middleware('auth', ['except' => array('index')]);
   }
 
   public function index()

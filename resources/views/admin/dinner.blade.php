@@ -12,7 +12,15 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 
 <div class="col-lg-12">
-    <h4 class="header-title">Cocktails</h4>
+    <h4 class="header-title">dinner</h4>
+
+    <p class="sub-header">
+      @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+      @endif
+    </p>
 
     <div class="table-responsive">
         <table id="table" class="table table-hover mb-0">
@@ -28,16 +36,16 @@
             </tr>
             </thead>
             <tbody id="tablecontents">
-            @foreach ($cocktails as $cocktail)
-            <tr class="row1" data-id="{{$cocktail->id}}">
-                <th scope="row">{{ $cocktail->sort_id }}</th>
-                <td>{{ $cocktail->cocktail_category }}</td>
-                <td>{{ $cocktail->name }}</td>
-                <td>{{ $cocktail->desc }}</td>
-                <td>{{ $cocktail->price }}</td>
-                <td><a href="{{ route('cocktails.edit', $cocktail->id)}}" class="btn btn-success">Edit</a></td>
+            @foreach ($dinner as $dinners)
+            <tr class="row1" data-id="{{$dinners->id}}">
+                <th scope="row">{{ $dinners->sort_id }}</th>
+                <td>{{ $dinners->cocktail_category }}</td>
+                <td>{{ $dinners->name }}</td>
+                <td>{{ $dinners->desc }}</td>
+                <td>{{ $dinners->price }}</td>
+                <td><a href="{{ route('dinner.edit', $dinners->id)}}" class="btn btn-success">Edit</a></td>
                 <td>
-                    <form action="{{ route('cocktails.destroy', $cocktail->id)}}" method="post">
+                    <form action="{{ route('dinner.destroy', $dinners->id)}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Delete</button>
@@ -72,7 +80,7 @@
       // success notification
       // Shorthand for:
       // alertify.notify( message, 'success', [wait, callback]);
-      alertify.success('Cocktails Successfully Updated');
+      alertify.success('dinner Successfully Updated');
 
       var sort_id = [];
       var token = $('meta[name="csrf-token"]').attr('content');
@@ -87,7 +95,7 @@
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: "{{ url('/admin/cocktails-order') }}",
+        url: "{{ url('/admin/dinner-order') }}",
         data: {
           sort_id: sort_id,
           _token: token
@@ -100,10 +108,8 @@
           } else {
             console.log(response);
           }
-        },
-        error:function(response){
-          console.log("failed:", response);
-        },
+        }
+
 
       });
     }

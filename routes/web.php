@@ -31,6 +31,12 @@ Route::resource('lounge', 'LoungeController');
 Route::resource('administrator', 'AdminController');
 
 Route::get('/admin/cocktails', 'CocktailsController@cocktails')->name('cocktails-list');
-Route::post('/admin/cocktails-order','CocktailsController@updateOrder'); 
+Route::post('/admin/cocktails-order','CocktailsController@updateOrder');
+
+Route::get('/admin/desserts', 'DessertsController@desserts')->name('desserts-list');
+Route::post('/admin/desserts-order','DessertsController@updateOrder');
+
+Route::get('/admin/dinner', 'DinnerController@dinner')->name('dinner-list');
+Route::post('/admin/dinner-order','DinnerController@updateOrder');
 
 Auth::routes();

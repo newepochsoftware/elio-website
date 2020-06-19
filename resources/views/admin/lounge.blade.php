@@ -14,6 +14,14 @@
 <div class="col-lg-12">
     <h4 class="header-title">Cocktails</h4>
 
+    <p class="sub-header">
+      @if (session('status'))
+          <div class="alert alert-success">
+              {{ session('status') }}
+          </div>
+      @endif
+    </p>
+
     <div class="table-responsive">
         <table id="table" class="table table-hover mb-0">
             <thead>
@@ -100,10 +108,8 @@
           } else {
             console.log(response);
           }
-        },
-        error:function(response){
-          console.log("failed:", response);
-        },
+        }
+
 
       });
     }

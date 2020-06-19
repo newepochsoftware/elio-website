@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 
 <div class="col-lg-12">
-    <h4 class="header-title">Cocktails</h4>
+    <h4 class="header-title">desserts</h4>
 
     <div class="table-responsive">
         <table id="table" class="table table-hover mb-0">
@@ -28,16 +28,16 @@
             </tr>
             </thead>
             <tbody id="tablecontents">
-            @foreach ($cocktails as $cocktail)
-            <tr class="row1" data-id="{{$cocktail->id}}">
-                <th scope="row">{{ $cocktail->sort_id }}</th>
-                <td>{{ $cocktail->cocktail_category }}</td>
-                <td>{{ $cocktail->name }}</td>
-                <td>{{ $cocktail->desc }}</td>
-                <td>{{ $cocktail->price }}</td>
-                <td><a href="{{ route('cocktails.edit', $cocktail->id)}}" class="btn btn-success">Edit</a></td>
+            @foreach ($desserts as $dessert)
+            <tr class="row1" data-id="{{$dessert->id}}">
+                <th scope="row">{{ $dessert->sort_id }}</th>
+                <td>{{ $dessert->category }}</td>
+                <td>{{ $dessert->name }}</td>
+                <td>{{ $dessert->desc }}</td>
+                <td>{{ $dessert->price }}</td>
+                <td><a href="{{ route('desserts.edit', $dessert->id)}}" class="btn btn-success">Edit</a></td>
                 <td>
-                    <form action="{{ route('cocktails.destroy', $cocktail->id)}}" method="post">
+                    <form action="{{ route('desserts.destroy', $dessert->id)}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Delete</button>
@@ -72,7 +72,7 @@
       // success notification
       // Shorthand for:
       // alertify.notify( message, 'success', [wait, callback]);
-      alertify.success('Cocktails Successfully Updated');
+      alertify.success('Desserts Successfully Updated');
 
       var sort_id = [];
       var token = $('meta[name="csrf-token"]').attr('content');
@@ -87,8 +87,9 @@
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: "{{ url('/admin/cocktails-order') }}",
+        url: "{{ url('/admin/desserts-order') }}",
         data: {
+          _method: 'POST',
           sort_id: sort_id,
           _token: token
         },
@@ -96,7 +97,6 @@
 
           if (response.status == "success") {
             console.log(response);
-            $('.toast').toast('hide')
           } else {
             console.log(response);
           }
@@ -104,9 +104,9 @@
         error:function(response){
           console.log("failed:", response);
         },
-
       });
     }
+
   });
 </script>
 

@@ -41,7 +41,7 @@
                 <li>
                     <a href="javascript: void(0);">
                         <i class="fe-layers"></i>
-                        <span> Menu </span>
+                        <span> Menus </span>
                         <span class="menu-arrow"></span>
                     </a>
 
@@ -54,8 +54,8 @@
 
                         <li><a href="{{ route('cocktails-list') }}">Desserts</a></li>
                         <ul class="nav-third-level" aria-expanded="false">
-                            <li><a href="{{ route('cocktails-list') }}">View All</a></li>
-                            <li><a href="{{ route('cocktails-list') }}">Create New</a></li>
+                            <li><a href="{{ route('desserts-list') }}">View All</a></li>
+                            <li><a href="{{ route('desserts.create') }}">Create New</a></li>
                         </ul>
                     </ul>
                     <ul class="nav-second-level" aria-expanded="false">
