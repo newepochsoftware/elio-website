@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Cocktails extends Model
 {
     //
-    protected $fillable = ['thumbnail', 'name', 'social', 'partner_info', 'bio'];
+    protected $fillable = ['cocktail_category', 'desc', 'price', 'sort_id'];
 
 }

@@ -31,6 +31,6 @@ Route::resource('lounge', 'LoungeController');
 Route::resource('administrator', 'AdminController');
 
 Route::get('/admin/cocktails', 'CocktailsController@cocktails')->name('cocktails-list');
-
+Route::post('/admin/cocktails-order','CocktailsController@updateOrder'); 
 
 Auth::routes();

@@ -26,6 +26,8 @@
         <link href="{{ asset('admin/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('admin/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
         <link href="{{ asset('admin/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <!-- Vendor js -->
+
 
     </head>
 
@@ -63,21 +65,8 @@
 
       </div>
 
-      <!-- Vendor js -->
-      <script src="{{ asset('admin/js/vendor.min.js') }}"></script>
 
-      <!-- Flot chart -->
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.time.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.tooltip.min.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.resize.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.pie.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.crosshair.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/curvedLines.js') }}"></script>
-      <script src="{{ asset('admin/libs/flot-charts/jquery.flot.axislabels.js') }}"></script>
 
-      <!-- App js -->
-      <script src="{{ asset('admin/js/app.min.js') }}"></script>
 
     </body>
 </html>

@@ -34,9 +34,9 @@ class CocktailsController extends Controller
       return Cocktails::find($id);
   }
 
-  public function cocktails(Cocktails $cocktails)
+  public function cocktails(Request $request)
   {
-    $cocktails = Cocktails::all();
+    $cocktails = Cocktails::all()->sortBy('sort_id');
     return view('admin.cocktails', compact('cocktails'));
   }
 
@@ -64,6 +64,31 @@ class CocktailsController extends Controller
 
       return redirect('/admin/cocktails')->with('success', 'Cocktails Have Been Added');
   }
+
+
+  // public function index(Request $request){
+  //     $data = Menu::orderBy('sort_id','asc')->get();
+  //     return view('menu',compact('data'));
+  // }
+
+  public function updateOrder(Request $request)
+    {
+        $cocktails = Cocktails::all();
+
+
+        foreach ($cocktails as $cocktail) {
+            foreach ($request->sort_id as $sort_id) {
+                if ($sort_id['id'] == $cocktail->id) {
+                    $cocktail->update(['sort_id' => $sort_id['position']]);
+                }
+            }
+        }
+
+        return response('Cocktails Order Updated.', 200);
+
+        // return redirect('/admin/cocktails')->with('success', 'Cocktails Have Been Updated');
+
+    }
 
   public function delete(Request $request, $id)
   {
