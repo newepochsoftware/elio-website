@@ -24,14 +24,16 @@
                     <div class="footer-address contact-info">
                         <p><i class="fa fa-map-marker"></i>3131 S Las Vegas Blvd, Las Vegas, NV 89109</p>
                         <p><i class="fa fa-phone"></i>Phone: (702) 770-7000</p>
-                        <p><i class="fa fa-envelope-o"></i>groupsales@eliolv.com</p>
+                        <!-- <p><i class="fa fa-envelope-o"></i>groupsales@eliolv.com</p> -->
                     </div>
                     <br>
 
                     <h3 class="text-left no-margin-top">Hours of Operation</h3>
                     <div class="contact-info text-muted">
-                        <p>10:00 am to 11:00 pm on Weekdays</p>
-                        <p>11:00 am to 11:30 pm on Weekends</p>
+                        <p>Dinner is served Thursday and Sunday from 5:30 – 10 p.m. in the dining room and 5:30 – 11 p.m. in the lounge;</p>
+                        <p>Friday and Saturday from 5:30 – 11 p.m. in the dining room and 5:30 p.m. – 1 a.m. in the lounge.</p>
+                        <p>The attire is stylish casual. Children under five are not permitted.</p>
+                        <p>No one under 21 years of age is allowed after 10 pm.</p>
                     </div>
                     <br>
                     <h3 class="text-left no-margin-top">Cuisine</h3>

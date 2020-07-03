@@ -36,7 +36,7 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label" for="simpleinput">Category</label>
                         <div class="col-md-3">
-                          <select name="cocktail_category" id="inputState" class="form-control">
+                          <select name="category" id="inputState" class="form-control">
                             <option>{{ $dinner->category }}</option>
                           </select>
                         </div>

@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
 
 <div class="col-lg-12">
-    <h4 class="header-title">Cocktails</h4>
+    <h4 class="header-title">Lounge</h4>
 
     <p class="sub-header">
       @if (session('status'))
@@ -36,16 +36,16 @@
             </tr>
             </thead>
             <tbody id="tablecontents">
-            @foreach ($cocktails as $cocktail)
-            <tr class="row1" data-id="{{$cocktail->id}}">
-                <th scope="row">{{ $cocktail->sort_id }}</th>
-                <td>{{ $cocktail->cocktail_category }}</td>
-                <td>{{ $cocktail->name }}</td>
-                <td>{{ $cocktail->desc }}</td>
-                <td>{{ $cocktail->price }}</td>
-                <td><a href="{{ route('cocktails.edit', $cocktail->id)}}" class="btn btn-success">Edit</a></td>
+            @foreach ($lounge as $lounges)
+            <tr class="row1" data-id="{{$lounges->id}}">
+                <th scope="row">{{ $lounges->sort_id }}</th>
+                <td>{{ $lounges->category }}</td>
+                <td>{{ $lounges->name }}</td>
+                <td>{{ $lounges->desc }}</td>
+                <td>{{ $lounges->price }}</td>
+                <td><a href="{{ route('lounge.edit', $lounges->id)}}" class="btn btn-success">Edit</a></td>
                 <td>
-                    <form action="{{ route('cocktails.destroy', $cocktail->id)}}" method="post">
+                    <form action="{{ route('lounge.destroy', $lounges->id)}}" method="post">
                     @csrf
                     @method('DELETE')
                     <button class="btn btn-danger" type="submit">Delete</button>
@@ -95,7 +95,7 @@
       $.ajax({
         type: "POST",
         dataType: "json",
-        url: "{{ url('/admin/cocktails-order') }}",
+        url: "{{ url('/admin/lounge-order') }}",
         data: {
           sort_id: sort_id,
           _token: token

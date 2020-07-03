@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\File;
 use App\Dinner;
+use Carbon\Carbon;
 
 class DinnerController extends Controller
 {
@@ -42,7 +46,7 @@ class DinnerController extends Controller
   {
       $dinner = new Dinner();
       $dinner->sort_id = $request->get('sort_id');
-      $dinner->cocktail_category = $request->get('cocktail_category');
+      $dinner->category = $request->get('category');
       $dinner->name = $request->get('name');
       $dinner->desc = $request->get('desc');
       $dinner->price = $request->get('price');
@@ -62,7 +66,7 @@ class DinnerController extends Controller
   {
       $dinner = Dinner::findOrFail($id);
       // $dinner->update($request->all());
-      $dinner->cocktail_category = $request->get('cocktail_category');
+      $dinner->category = $request->get('category');
       $dinner->name = $request->get('name');
       $dinner->desc = $request->get('desc');
       $dinner->price = $request->get('price');
@@ -78,23 +82,23 @@ class DinnerController extends Controller
   // }
 
   public function updateOrder(Request $request)
-    {
-        $dinner = Dinner::all();
+  {
+      $dinner = Dinner::all();
 
 
-        foreach ($dinner as $cocktail) {
-            foreach ($request->sort_id as $sort_id) {
-                if ($sort_id['id'] == $cocktail->id) {
-                    $cocktail->update(['sort_id' => $sort_id['position']]);
-                }
-            }
-        }
+      foreach ($dinner as $dinners) {
+          foreach ($request->sort_id as $sort_id) {
+              if ($sort_id['id'] == $dinners->id) {
+                  $dinners->update(['sort_id' => $sort_id['position']]);
+              }
+          }
+      }
 
-        return response('dinner Order Updated.', 200);
+      return response('dinner Order Updated.', 200);
 
-        // return redirect('/admin/dinner')->with('success', 'dinner Have Been Updated');
+      // return redirect('/admin/dinner')->with('success', 'dinner Have Been Updated');
 
-    }
+  }
 
   public function destroy(Request $request, $id)
   {

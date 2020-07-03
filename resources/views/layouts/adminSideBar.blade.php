@@ -52,24 +52,24 @@
                             <li><a href="{{ route('cocktails.create') }}">Create New</a></li>
                         </ul>
 
-                        <li><a href="{{ route('cocktails-list') }}">Desserts</a></li>
+                        <li><a href="{{ route('desserts-list') }}">Desserts</a></li>
                         <ul class="nav-third-level" aria-expanded="false">
                             <li><a href="{{ route('desserts-list') }}">View All</a></li>
                             <li><a href="{{ route('desserts.create') }}">Create New</a></li>
                         </ul>
                     </ul>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="{{ route('cocktails-list') }}">Dinner</a></li>
+                        <li><a href="{{ route('dinner-list') }}">Dinner</a></li>
                         <ul class="nav-third-level" aria-expanded="true">
-                            <li><a href="{{ route('cocktails-list') }}">View All</a></li>
-                            <li><a href="{{ route('cocktails-list') }}">Create New</a></li>
+                            <li><a href="{{ route('dinner-list') }}">View All</a></li>
+                            <li><a href="{{ route('dinner.create') }}">Create New</a></li>
                         </ul>
                     </ul>
                     <ul class="nav-second-level" aria-expanded="false">
-                        <li><a href="{{ route('cocktails-list') }}">Lounge</a></li>
+                        <li><a href="{{ route('lounge-list') }}">Lounge</a></li>
                         <ul class="nav-third-level" aria-expanded="true">
-                            <li><a href="{{ route('cocktails-list') }}">View All</a></li>
-                            <li><a href="{{ route('cocktails-list') }}">Create New</a></li>
+                            <li><a href="{{ route('lounge-list') }}">View All</a></li>
+                            <li><a href="{{ route('lounge.create') }}">Create New</a></li>
                         </ul>
                     </ul>
                 </li>

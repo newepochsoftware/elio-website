@@ -39,4 +39,7 @@ Route::post('/admin/desserts-order','DessertsController@updateOrder');
 Route::get('/admin/dinner', 'DinnerController@dinner')->name('dinner-list');
 Route::post('/admin/dinner-order','DinnerController@updateOrder');
 
+Route::get('/admin/lounge', 'LoungeController@lounge')->name('lounge-list');
+Route::post('/admin/lounge-order','LoungeController@updateOrder');
+
 Auth::routes();

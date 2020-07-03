@@ -1,15 +1,14 @@
 @extends('layouts.admin')
 
 @section('content')
-<!-- <h4 class="header-title mb-3">Cocktails</h4> -->
 
 <div class="col-lg-12">
-  <h4 class="header-title">New Cocktail</h4>
+  <h4 class="header-title">New Lounge</h4>
   <hr>
     <div class="row">
         <div class="col-12">
             <div>
-                <form class="form-horizontal" method="post" action="{{ route('cocktails.store') }}" enctype="multipart/form-data">
+                <form class="form-horizontal" method="post" action="{{ route('lounge.store') }}" enctype="multipart/form-data">
                     @csrf
 
                     <input type="hidden" name="sort_id" value="0">
@@ -38,8 +37,8 @@
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label" for="simpleinput">Category</label>
                         <div class="col-md-3">
-                          <select name="cocktail_category" id="inputState" class="form-control">
-                            <option>Cocktails</option>
+                          <select name="category" id="inputState" class="form-control">
+                            <option>Lounge</option>
                           </select>
                         </div>
                     </div>

@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
-                <article class="wow fadeInUp">
+                <!-- <article class="wow fadeInUp">
                     <div class="post-img">
                         <div class="blog-slider">
                             <div>
@@ -66,7 +66,8 @@
                     <li class="active"><a href="#">1</a></li>
                     <li><a href="#">2</a></li>
                     <li><a href="#">3</a></li>
-                </ul>
+                </ul> -->
+                Coming Soon...
             </div>
         </div>
     </div>

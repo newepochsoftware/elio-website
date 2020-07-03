@@ -14,14 +14,6 @@
 <div class="col-lg-12">
     <h4 class="header-title">dinner</h4>
 
-    <p class="sub-header">
-      @if (session('status'))
-          <div class="alert alert-success">
-              {{ session('status') }}
-          </div>
-      @endif
-    </p>
-
     <div class="table-responsive">
         <table id="table" class="table table-hover mb-0">
             <thead>
@@ -39,7 +31,7 @@
             @foreach ($dinner as $dinners)
             <tr class="row1" data-id="{{$dinners->id}}">
                 <th scope="row">{{ $dinners->sort_id }}</th>
-                <td>{{ $dinners->cocktail_category }}</td>
+                <td>{{ $dinners->category }}</td>
                 <td>{{ $dinners->name }}</td>
                 <td>{{ $dinners->desc }}</td>
                 <td>{{ $dinners->price }}</td>
@@ -80,7 +72,7 @@
       // success notification
       // Shorthand for:
       // alertify.notify( message, 'success', [wait, callback]);
-      alertify.success('dinner Successfully Updated');
+      alertify.success('Dinner Successfully Updated');
 
       var sort_id = [];
       var token = $('meta[name="csrf-token"]').attr('content');
