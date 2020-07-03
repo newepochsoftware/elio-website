@@ -23,9 +23,9 @@
 
 
         <!-- App css -->
-        <link href="{{ asset('/css/bootstrap-admin.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
-        <link href="{{ asset('/css/app.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/bootstrap-admin.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ asset('css/app.min.css') }}" rel="stylesheet" type="text/css" />
 
     </head>
 
@@ -48,10 +48,10 @@
       </div>
 
       <!-- Vendor js -->
-      <script src="{{ asset('/js/vendor.min.js') }}"></script>
+      <script src="{{ asset('js/vendor.min.js') }}"></script>
 
       <!-- App js -->
-      <script src="{{ asset('/js/app.min.js') }}"></script>
+      <script src="{{ asset('js/app.min.js') }}"></script>
 
     </body>
 </html>
