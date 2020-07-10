@@ -3,13 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Cocktails;
+use App\Dessert;
+use App\Dinner;
+use App\Lounge;
+
 
 class HomeController extends Controller
 {
   public function index()
   {
-      // return Home::all();
-      return view('home');
+      $cocktails = Cocktails::all()->sortBy('sort_id');
+      $dinner = Dinner::all()->sortBy('sort_id');
+      $desserts = Dessert::all()->sortBy('sort_id');
+      $lounge = Lounge::all()->sortBy('sort_id');
+
+      return view('home', compact('cocktails', 'dinner','desserts','lounge'));
 
   }
   public function show($id)

@@ -2,6 +2,113 @@
 
 @section('content')
 
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Restaurant",
+  "name": "Elio at Wynn Las Vegas",
+  "description": "Inspired by Mexico's rich heritage of celebratory food and gatherings",
+  "openingHours": "Th,Fr,Sa,Su 17:30-01:00",
+  "image":"https://storage.googleapis.com/wynn-bucket/elio-food-pic-7.jpg",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Las Vegas",
+    "addressRegion": "NV",
+    "postalCode": "89109",
+    "streetAddress": "3131 S Las Vegas Blvd"
+  },
+  "priceRange": "$$",
+  "servesCuisine": [
+    "Spanish"
+  ],
+  "telephone": "+17027707000",
+  "hasMenu":{
+      "@type":"Menu",
+      "name":"Dine-In Menu",
+      "description":"Dinner is served Thursday and Sunday from 5:30 – 10 p.m. in the dining room and 5:30 – 11 p.m. in the lounge; Friday and Saturday from 5:30 – 11 p.m. in the dining room and 5:30 p.m. – 1 a.m. in the lounge.",
+      "hasMenuSection": [
+        {
+        "@type": "MenuSection",
+        "name": "Desserts",
+        "hasMenuItem": [
+          @foreach ($desserts as $dessert)
+          {
+           "@type": "MenuItem",
+           "name": "{{ $dessert->name }}",
+           "description": "{{ $dessert->desc }}",
+           "offers": {
+           "@type": "Offer",
+           "price": "{{ $dessert->price }}",
+           "priceCurrency": "USD"
+           }
+          }
+          @if (!$loop->last),@endif
+          @endforeach
+        ]
+      },
+      {
+      "@type": "MenuSection",
+      "name": "Cocktails",
+      "hasMenuItem": [
+        @foreach ($cocktails as $cocktail)
+        {
+         "@type": "MenuItem",
+         "name": "{{ $cocktail->name }}",
+         "description": "{{ $cocktail->desc }}",
+         "offers": {
+         "@type": "Offer",
+         "price": "{{ $cocktail->price }}",
+         "priceCurrency": "USD"
+         }
+        }
+        @if (!$loop->last),@endif
+        @endforeach
+      ]
+      },
+      {
+      "@type": "MenuSection",
+      "name": "Dinner",
+      "hasMenuItem": [
+        @foreach ($dinner as $dinners)
+        {
+         "@type": "MenuItem",
+         "name": "{{ $dinners->name }}",
+         "description": "{{ $dinners->desc }}",
+         "offers": {
+         "@type": "Offer",
+         "price": "{{ $dinners->price }}",
+         "priceCurrency": "USD"
+         }
+        }
+        @if (!$loop->last),@endif
+        @endforeach
+      ]
+
+      },
+      {
+      "@type": "MenuSection",
+      "name": "Lounge",
+      "hasMenuItem": [
+        @foreach ($lounge as $lounges)
+        {
+         "@type": "MenuItem",
+         "name": "{{ $lounges->name }}",
+         "description": "{{ $lounges->desc }}",
+         "offers": {
+         "@type": "Offer",
+         "price": "{{ $lounges->price }}",
+         "priceCurrency": "USD"
+         }
+        }
+        @if (!$loop->last),@endif
+        @endforeach
+      ]
+      }
+      ]
+    }
+}
+</script>
+
 <!-- Home page-->
 <section class="home">
     <div class="overlay"></div>
