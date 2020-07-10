@@ -2,6 +2,44 @@
 
 @section('content')
 
+<script type="application/ld+json">
+{
+   "@context":"http://schema.org",
+   "@type":"Menu",
+   "name": "Elio Menu",
+   "url": "{{  Request::url() }}",
+   "mainEntityOfPage": "{{  Request::url() }}",
+   "inLanguage":"English",
+   "offers": {
+    "@type": "Offer",
+    "availabilityStarts": "T17:30",
+    "availabilityEnds": "T23:00"
+   },
+  "hasMenuSection": [
+    {
+    "@type": "MenuSection",
+    "name": "Desserts",
+    "hasMenuItem": [
+      @foreach ($desserts as $dessert)
+      {
+       "@type": "MenuItem",
+       "name": "{{ $dessert->name }}",
+       "description": "{{ $dessert->desc }}",
+       "offers": {
+       "@type": "Offer",
+       "price": "{{ $dessert->price }}",
+       "priceCurrency": "USD"
+       }
+      }
+      @if (!$loop->last),@endif
+      @endforeach
+    ]
+
+    }
+  ]
+}
+</script>
+
 <!-- Page Header -->
 <section class="page_header page_header_reservations">
     <div class="container">

@@ -40,14 +40,6 @@
                     <div class="contact-info text-muted">
                         <p>Spanish</p>
                     </div>
-                    <br>
-
-                    <h3 class="text-left no-margin-top">Follow Us</h3>
-                    <div class="contact-social">
-                        <a href="http://www.facebook.com/elio.lasvegas"><i class="fa fa-facebook"></i></a>
-                        <a href="http://www.twitter.com/elio_lv"><i class="fa fa-twitter"></i></a>
-                        <a href="http://www.instagram.com/elio_lv"><i class="fa fa-instagram"></i></a>
-                    </div>
                 </div>
                 <div class="col-md-6 billing-details">
                     <h3 class="text-left no-margin-top">Book A Private Event</h3>
